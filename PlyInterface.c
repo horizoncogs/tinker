@@ -109,7 +109,7 @@ void ply_interface_delete(PlyPolynomialMemory *memory) {
     int a = 0;
     printf("<Your input> ");
     scanf("%d", &a);
-    if (!(a >= 0 && a <= memory->length)) {
+    if (!(a > 0 && a <= memory->length)) {
         printf("---\n");
         printf("Invalid input, operation interrupted.\n");
         return;
@@ -134,7 +134,7 @@ void ply_interface_sum(PlyPolynomialMemory *memory) {
     int a = 0, b = 0;
     printf("<Your input> ");
     scanf("%d %d", &a, &b);
-    if (!(a >= 0 && a <= memory->length && b >= 0 && b <= memory->length)) {
+    if (!(a > 0 && a <= memory->length && b > 0 && b <= memory->length)) {
         printf("---\n");
         printf("Invalid input, operation interrupted.\n");
         return;
@@ -172,7 +172,7 @@ void ply_interface_multiply_scalar(PlyPolynomialMemory *memory) {
     if (polt == 1) {
         int pot = 0;
         scanf("%d %d", &a, &pot);
-        if (!(a >= 0 && a <= memory->length)) {
+        if (!(a > 0 && a <= memory->length)) {
             printf("---\n");
             printf("Invalid input, operation interrupted.\n");
             return;
@@ -186,7 +186,7 @@ void ply_interface_multiply_scalar(PlyPolynomialMemory *memory) {
     } else if (polt == 2) {
         float pot = 0;
         scanf("%d %f", &a, &pot);
-        if (!(a >= 0 && a <= memory->length)) {
+        if (!(a > 0 && a <= memory->length)) {
             printf("---\n");
             printf("Invalid input, operation interrupted.\n");
             return;
@@ -212,7 +212,7 @@ void ply_interface_multiply_vector(PlyPolynomialMemory *memory) {
     int a = 0, b = 0;
     printf("<Your input> ");
     scanf("%d %d", &a, &b);
-    if (!(a >= 0 && a <= memory->length && b >= 0 && b <= memory->length)) {
+    if (!(a > 0 && a <= memory->length && b > 0 && b <= memory->length)) {
         printf("---\n");
         printf("Invalid input, operation interrupted.\n");
         return;
@@ -237,7 +237,7 @@ void ply_interface_compose(PlyPolynomialMemory *memory) {
     int a = 0, b = 0;
     printf("<Your input> ");
     scanf("%d %d", &a, &b);
-    if (!(a >= 0 && a <= memory->length && b >= 0 && b <= memory->length)) {
+    if (!(a > 0 && a <= memory->length && b > 0 && b <= memory->length)) {
         printf("---\n");
         printf("Invalid input, operation interrupted.\n");
         return;
